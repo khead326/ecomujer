@@ -35,10 +35,9 @@
 
         <select name="category_id" class="form_control">
         <% Category.all.each do |category| %>
-        <option value"<%=category_id%>"><%= category
-
-
-
+        <option value="<%=category.id%>"><%= category.category_name %></option>
+        <%end%>
+      </select>
       </div>
 
       <!-- Label and input for origin -->
