@@ -1,8 +1,8 @@
 class ItemsController < ApplicationController
   def index
     @items = Item.all
-
-
+    
+end
     render("items/index.html.erb")
   end
 

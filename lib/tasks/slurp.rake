@@ -1,6 +1,6 @@
 namespace :slurp do
   desc "TODO"
-  task transactions: :environment do
+  task items: :environment do
 
     require "csv"
 
@@ -38,7 +38,7 @@ end
     puts "#{t.product}, #{t.product_category} saved"
   end
 
-  puts "There are now #{Transaction.count} rows in the items table"
+  puts "There are now #{Item.count} rows in the items table"
   end
 
 end
