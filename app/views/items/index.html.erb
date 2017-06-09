@@ -31,14 +31,15 @@
         <td><%= item.format %></td>
         <td><%= item.price %></td>
         <td><%= item.quantity %></td>
-        
 
         <td>
+
           <a href="/items/<%= item.id %>" class="btn btn-primary">Show</a>
           <a href="/items/<%= item.id %>/edit" class="btn btn-warning">Edit</a>
           <a href="/delete_item/<%= item.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
-      </tr>
+        <!--else add to favorites -->
+            </tr>
       <% end %>
     </table>
   </div>
