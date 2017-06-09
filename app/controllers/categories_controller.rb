@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+
   def index
     @categories = Category.all
 
@@ -24,12 +25,10 @@ class CategoriesController < ApplicationController
     save_status = @category.save
 
     if save_status == true
-      redirect_to("/categories}", :notice => "Favorite created successfully.")
+      redirect_to("/categories/#{@category.id}", :notice => "Category created successfully.")
     else
       render("category/new.html.erb")
     end
-
-
   end
 
   def edit
