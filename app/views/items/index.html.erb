@@ -31,14 +31,8 @@
         <td><%= item.format %></td>
         <td><%= item.price %></td>
         <td><%= item.quantity %></td>
-        <td>
-                  <% favorite = Favorite.find_by(:item_id => item.id, :user_id => current_user.id) %>
-                <% if favorite.present? %>
-                  <a href="/delete_favorite/<%= favorite.id %>" class="btn btn-link">
-                    <i class="fa fa-heart"></i>
-                  </a>
 
-                <% else %>
+
                   <form action="/create_favorite" method="post">
                     <!-- Hidden input for authenticity token to protect from forgery -->
                     <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
@@ -58,8 +52,7 @@
           <a href="/delete_item/<%= item.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
         </tr>
-      <% end %>
-    
+
     </table>
   </div>
 </div>

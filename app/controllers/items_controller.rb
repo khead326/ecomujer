@@ -2,11 +2,13 @@ class ItemsController < ApplicationController
   def index
     @items = Item.all
 
+
     render("items/index.html.erb")
   end
 
   def show
     @item = Item.find(params[:id])
+
 
     render("items/show.html.erb")
   end
@@ -27,7 +29,7 @@ class ItemsController < ApplicationController
     @item.price = params[:price]
     @item.quantity = params[:quantity]
     @item.image = params[:image]
-    @item.category_id = params [:category_id]
+    @item.category_id = params[:category_id]
 
     save_status = @item.save
 

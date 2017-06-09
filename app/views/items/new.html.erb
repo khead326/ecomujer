@@ -33,7 +33,7 @@
           Product Category
         </label>
 
-        <select name="category_id" class="form_control">
+        <select name="category_id" class="form-control">
         <% Category.all.each do |category| %>
         <option value="<%=category.id%>"><%= category.category_name %></option>
         <%end%>
@@ -82,9 +82,9 @@
           Image
         </label>
 
-        <input type="text" id="image" name="image" placeholder="Image" class="form-control" value="<%= @item.image %>">
+        <input type="file" id="image" name="image" placeholder="Add a URL..." class="form-control" value="<%= @item.image %>">
       </div>
-
+      
       <button class="btn btn-success">
         Create Item
       </button>
