@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   # Routes for the Category resource:
   # CREATE
   get "/categories/new", :controller => "categories", :action => "new"
-  post "/create_category", :controller => "categories", :action => "create"
+  get "/create_category", :controller => "categories", :action => "create"
 
   # READ
   get "/categories", :controller => "categories", :action => "index"

@@ -27,6 +27,7 @@ class ItemsController < ApplicationController
     @item.price = params[:price]
     @item.quantity = params[:quantity]
     @item.image = params[:image]
+    @item.category_id = params [:category_id]
 
     save_status = @item.save
 

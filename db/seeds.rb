@@ -26,22 +26,22 @@ puts "#{User.count} users in the database"
 
 Category.destroy_all
 C1 = Category.new
-C1.category = "Fruits and Vegetables"
+C1.category_name = "Fruits and Vegetables"
 C2.save
 
 C2 = Category.new
-C2.category = "Beverages"
+C2.category_name = "Beverages"
 C2.save
 
 C3 = Category.new
-C3.category = "Processed Goods"
+C3.category_name = "Processed Goods"
 C3.save
 
 C4 = Category.new
-C4.category = "Fertilizer"
+C4.category_name = "Fertilizer"
 C4.save
 
 C5 = Category.new
-C5.category = "Other"
+C5.category_name = "Other"
 C5.save
 puts "#{Category.count} categories in the database"

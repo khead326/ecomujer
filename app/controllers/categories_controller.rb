@@ -19,7 +19,7 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new
-
+    @category.category_name = params[:category_name]
 
     save_status = @category.save
 
