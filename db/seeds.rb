@@ -29,4 +29,19 @@ C1 = Category.new
 C1.category = "Fruits and Vegetables"
 C2.save
 
+C2 = Category.new
+C2.category = "Beverages"
+C2.save
+
+C3 = Category.new
+C3.category = "Processed Goods"
+C3.save
+
+C4 = Category.new
+C4.category = "Fertilizer"
+C4.save
+
+C5 = Category.new
+C5.category = "Other"
+C5.save
 puts "#{Category.count} categories in the database"
