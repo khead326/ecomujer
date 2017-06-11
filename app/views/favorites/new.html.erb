@@ -17,15 +17,17 @@
     <form action="/create_favorite" method="post">
       <!-- Hidden input for authenticity token to protect from forgery -->
       <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
-
+      
       <!-- Label and input for item_id -->
       <div class="form-group">
         <label for="item_id" class="control-label">
           Item
         </label>
 
-      <%= select_tag(:item_id, options_from_collection_for_select(Item.all.order("product ASC"), :id, :product), :class => "form-control") %>
+        <input type="text" id="item_id" name="item_id" placeholder="Item" class="form-control" value="<%= @favorite.item_id %>">
       </div>
+
+      <button class="btn btn-success">
       <!-- Label and input for amount_requested -->
       <div class="form-group">
         <label for="amount_requested" class="control-label">
@@ -38,12 +40,15 @@
       <!-- Label and input for user_id -->
       <div class="form-group">
         <label for="user_id" class="control-label">
-              </label>
+          User
+        </label>
 
+<<<<<<< HEAD
         <input type="hidden" id="user_id" name="user_id"  value="<%= @favorite.user_id %>">
+=======
+        <input type="text" id="user_id" name="user_id" placeholder="User" class="form-control" value="<%= @favorite.user_id %>">
+>>>>>>> parent of 45c9fc2... 1am
       </div>
-      <button class="btn btn-success">
-
 
 
         Create Favorite

@@ -2,6 +2,8 @@
   <h1>
   Shopping List
     <a href="/favorites/new" class="btn btn-lg btn-success">New Item on List</a>
+    <%=current_user.email%> Favorites
+    <a href="/favorites/new" class="btn btn-lg btn-success">New Favorite</a>
   </h1>
 </div>
 
@@ -9,17 +11,16 @@
   <div class="col-md-12">
     <table class="table table-striped table-hover">
       <tr>
-        <th>Product</th>
+        <th>Item</th>
         <th>Amount requested</th>
+
+
         <th>Actions</th>
       </tr>
 
       <% @favorites.each do |favorite| %>
-        <%if current_user.id == favorite.user_id%>
       <tr>
-        <td>
-          <%= Movie.find(favorite.item_id).product %>
-        </td>
+        <td><%= favorite.item_id %></td>
         <td><%= favorite.amount_requested %></td>
 
 
@@ -29,7 +30,6 @@
           <a href="/delete_favorite/<%= favorite.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
       </tr>
-      <% end %>
       <% end %>
     </table>
   </div>

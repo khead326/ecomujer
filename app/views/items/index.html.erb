@@ -33,6 +33,8 @@
         <td><%= item.quantity %></td>
 
 
+
+
                   <form action="/create_favorite" method="post">
                     <!-- Hidden input for authenticity token to protect from forgery -->
                     <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
@@ -45,13 +47,21 @@
                       <i class="fa fa-heart-o"></i>
                     </button>
                   </form>
-                <% end %>
+
+
+
+        <td>
 
           <a href="/items/<%= item.id %>" class="btn btn-primary">Show</a>
           <a href="/items/<%= item.id %>/edit" class="btn btn-warning">Edit</a>
           <a href="/delete_item/<%= item.id %>" class="btn btn-danger" rel="nofollow">Delete</a>
         </td>
+
         </tr>
+
+
+      </tr>
+      <% end %>
 
     </table>
   </div>

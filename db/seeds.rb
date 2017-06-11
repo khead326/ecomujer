@@ -7,41 +7,41 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 
-U1 = User.new
-U1.email = "a@a.com"
-U1.password = "12341234"
-U1.password_confirmation = "12341234"
-U1.first_name= "Kyndrea"
-U1.last_name= "Head"
-U1.save
+u1 = User.new
+u1.email = "a@a.com"
+u1.password = "12341234"
+u1.password_confirmation = "12341234"
+u1.first_name= "Kyndrea"
+u1.last_name= "Head"
+u1.save
 
-U2 = User.new
-U2.email = "b@b.com"
-U2.password = "12341234"
-U2.password_confirmation = "12341234"
-U2.first_name= "Elizabeth"
-U2.last_name= "Kuehler"
-U2.save
+u2 = User.new
+u2.email = "b@b.com"
+u2.password = "12341234"
+u2.password_confirmation = "12341234"
+u2.first_name= "Elizabeth"
+u2.last_name= "Kuehler"
+u2.save
 puts "#{User.count} users in the database"
 
 Category.destroy_all
-C1 = Category.new
-C1.category_name = "Fruits and Vegetables"
-C2.save
+c1 = Category.new
+c1.category_name = "Fruits and Vegetables"
+c1.save
 
-C2 = Category.new
-C2.category_name = "Beverages"
-C2.save
+c2 = Category.new
+c2.category_name = "Beverages"
+c2.save
 
-C3 = Category.new
-C3.category_name = "Processed Goods"
-C3.save
+c3 = Category.new
+c3.category_name = "Processed Goods"
+c3.save
 
-C4 = Category.new
-C4.category_name = "Fertilizer"
-C4.save
+c4 = Category.new
+c4.category_name = "Fertilizer"
+c4.save
 
-C5 = Category.new
-C5.category_name = "Other"
-C5.save
+c5 = Category.new
+c5.category_name = "Other"
+c5.save
 puts "#{Category.count} categories in the database"
